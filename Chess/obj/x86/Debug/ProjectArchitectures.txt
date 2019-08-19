@@ -1,0 +1,1 @@
+E:\Tom\Chess\Chess\Chess\Chess.csproj;x86

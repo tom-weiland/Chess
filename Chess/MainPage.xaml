@@ -1,0 +1,195 @@
+﻿<Page
+    x:Class="Chess.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Chess"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+
+    </Page.Resources>
+
+    <Grid>
+        <Grid Name="WhitePrison" HorizontalAlignment="Right" VerticalAlignment="Center" Width="100" Height="200" Margin="0,0,50,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="50"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Button Background="#fff0e5" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="WPrisonR1C1"/>
+            <Button Background="#fff0e5" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="WPrisonR2C1"/>
+            <Button Background="#fff0e5" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="WPrisonR3C1"/>
+            <Button Background="#fff0e5" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="WPrisonR4C1"/>
+            <Button Background="#fff0e5" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="WPrisonR1C2"/>
+            <Button Background="#fff0e5" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="WPrisonR2C2"/>
+            <Button Background="#fff0e5" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="WPrisonR3C2"/>
+            <Button Background="#fff0e5" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="WPrisonR4C2"/>
+        </Grid>
+        <Grid Name="BlackPrison" HorizontalAlignment="Left" VerticalAlignment="Center" Width="100" Height="200" Margin="50,0,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="50"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Button Background="#512302" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="BPrisonR1C1"/>
+            <Button Background="#512302" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="BPrisonR2C1"/>
+            <Button Background="#512302" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="BPrisonR3C1"/>
+            <Button Background="#512302" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="BPrisonR4C1"/>
+            <Button Background="#512302" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="BPrisonR1C2"/>
+            <Button Background="#512302" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="BPrisonR2C2"/>
+            <Button Background="#512302" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="BPrisonR3C2"/>
+            <Button Background="#512302" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="BPrisonR4C2"/>
+        </Grid>
+        <Grid Name="Board" HorizontalAlignment="Center" VerticalAlignment="Center" Width="720" Height="720">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="90"/>
+                <ColumnDefinition Width="90"/>
+                <ColumnDefinition Width="90"/>
+                <ColumnDefinition Width="90"/>
+                <ColumnDefinition Width="90"/>
+                <ColumnDefinition Width="90"/>
+                <ColumnDefinition Width="90"/>
+                <ColumnDefinition Width="90"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="90"/>
+            </Grid.RowDefinitions>
+            <!-- Row 1 -->
+            <Button Background="#fff0e5" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R1C1_Clicked"/>
+            <Button Background="#512302" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R1C2_Clicked"/>
+            <Button Background="#fff0e5" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R1C3_Clicked"/>
+            <Button Background="#512302" Grid.Row="0" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R1C4_Clicked"/>
+            <Button Background="#fff0e5" Grid.Row="0" Grid.Column="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R1C5_Clicked"/>
+            <Button Background="#512302" Grid.Row="0" Grid.Column="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R1C6_Clicked"/>
+            <Button Background="#fff0e5" Grid.Row="0" Grid.Column="6" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R1C7_Clicked"/>
+            <Button Background="#512302" Grid.Row="0" Grid.Column="7" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R1C8_Clicked"/>
+            <!-- Row 2 -->
+            <Button Background="#512302" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R2C1_Clicked"/>
+            <Button Background="#fff0e5" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R2C2_Clicked"/>
+            <Button Background="#512302" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R2C3_Clicked"/>
+            <Button Background="#fff0e5" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R2C4_Clicked"/>
+            <Button Background="#512302" Grid.Row="1" Grid.Column="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R2C5_Clicked"/>
+            <Button Background="#fff0e5" Grid.Row="1" Grid.Column="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R2C6_Clicked"/>
+            <Button Background="#512302" Grid.Row="1" Grid.Column="6" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R2C7_Clicked"/>
+            <Button Background="#fff0e5" Grid.Row="1" Grid.Column="7" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R2C8_Clicked"/>
+            <!-- Row 3 -->
+            <Button Background="#fff0e5" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R3C1_Clicked"/>
+            <Button Background="#512302" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R3C2_Clicked"/>
+            <Button Background="#fff0e5" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R3C3_Clicked"/>
+            <Button Background="#512302" Grid.Row="2" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R3C4_Clicked"/>
+            <Button Background="#fff0e5" Grid.Row="2" Grid.Column="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R3C5_Clicked"/>
+            <Button Background="#512302" Grid.Row="2" Grid.Column="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R3C6_Clicked"/>
+            <Button Background="#fff0e5" Grid.Row="2" Grid.Column="6" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R3C7_Clicked"/>
+            <Button Background="#512302" Grid.Row="2" Grid.Column="7" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R3C8_Clicked"/>
+            <!-- Row 4 -->
+            <Button Background="#512302" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R4C1_Clicked"/>
+            <Button Background="#fff0e5" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R4C2_Clicked"/>
+            <Button Background="#512302" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R4C3_Clicked"/>
+            <Button Background="#fff0e5" Grid.Row="3" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R4C4_Clicked"/>
+            <Button Background="#512302" Grid.Row="3" Grid.Column="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R4C5_Clicked"/>
+            <Button Background="#fff0e5" Grid.Row="3" Grid.Column="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R4C6_Clicked"/>
+            <Button Background="#512302" Grid.Row="3" Grid.Column="6" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R4C7_Clicked"/>
+            <Button Background="#fff0e5" Grid.Row="3" Grid.Column="7" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R4C8_Clicked"/>
+            <!-- Row 5 -->
+            <Button Background="#fff0e5" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R5C1_Clicked"/>
+            <Button Background="#512302" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R5C2_Clicked"/>
+            <Button Background="#fff0e5" Grid.Row="4" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R5C3_Clicked"/>
+            <Button Background="#512302" Grid.Row="4" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R5C4_Clicked"/>
+            <Button Background="#fff0e5" Grid.Row="4" Grid.Column="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R5C5_Clicked"/>
+            <Button Background="#512302" Grid.Row="4" Grid.Column="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R5C6_Clicked"/>
+            <Button Background="#fff0e5" Grid.Row="4" Grid.Column="6" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R5C7_Clicked"/>
+            <Button Background="#512302" Grid.Row="4" Grid.Column="7" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R5C8_Clicked"/>
+            <!-- Row 6 -->
+            <Button Background="#512302" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R6C1_Clicked"/>
+            <Button Background="#fff0e5" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R6C2_Clicked"/>
+            <Button Background="#512302" Grid.Row="5" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R6C3_Clicked"/>
+            <Button Background="#fff0e5" Grid.Row="5" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R6C4_Clicked"/>
+            <Button Background="#512302" Grid.Row="5" Grid.Column="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R6C5_Clicked"/>
+            <Button Background="#fff0e5" Grid.Row="5" Grid.Column="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R6C6_Clicked"/>
+            <Button Background="#512302" Grid.Row="5" Grid.Column="6" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R6C7_Clicked"/>
+            <Button Background="#fff0e5" Grid.Row="5" Grid.Column="7" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R6C8_Clicked"/>
+            <!-- Row 7 -->
+            <Button Background="#fff0e5" Grid.Row="6" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R7C1_Clicked"/>
+            <Button Background="#512302" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R7C2_Clicked"/>
+            <Button Background="#fff0e5" Grid.Row="6" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R7C3_Clicked"/>
+            <Button Background="#512302" Grid.Row="6" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R7C4_Clicked"/>
+            <Button Background="#fff0e5" Grid.Row="6" Grid.Column="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R7C5_Clicked"/>
+            <Button Background="#512302" Grid.Row="6" Grid.Column="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R7C6_Clicked"/>
+            <Button Background="#fff0e5" Grid.Row="6" Grid.Column="6" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R7C7_Clicked"/>
+            <Button Background="#512302" Grid.Row="6" Grid.Column="7" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R7C8_Clicked"/>
+            <!-- Row 8 -->
+            <Button Background="#512302" Grid.Row="7" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R8C1_Clicked"/>
+            <Button Background="#fff0e5" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R8C2_Clicked"/>
+            <Button Background="#512302" Grid.Row="7" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R8C3_Clicked"/>
+            <Button Background="#fff0e5" Grid.Row="7" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R8C4_Clicked"/>
+            <Button Background="#512302" Grid.Row="7" Grid.Column="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R8C5_Clicked"/>
+            <Button Background="#fff0e5" Grid.Row="7" Grid.Column="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R8C6_Clicked"/>
+            <Button Background="#512302" Grid.Row="7" Grid.Column="6" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R8C7_Clicked"/>
+            <Button Background="#fff0e5" Grid.Row="7" Grid.Column="7" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="R8C8_Clicked"/>
+
+            <!-- Don't bother placing the selected tile highlight or the
+            pieces in their proper positions, we do that programmatically -->
+            <Image Name="SelectedTile" Source="Assets/Game/Tile-Selected.png" Grid.Row="0" Grid.Column="0" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Collapsed"/>
+            <!-- White Pieces -->
+            <Image Name="WhitePawn1" Source="Assets/Game/WhitePieces/Pawn-White.png" Grid.Row="7" Grid.Column="0" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image Name="WhitePawn2" Source="Assets/Game/WhitePieces/Pawn-White.png" Grid.Row="7" Grid.Column="0" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image Name="WhitePawn3" Source="Assets/Game/WhitePieces/Pawn-White.png" Grid.Row="7" Grid.Column="0" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image Name="WhitePawn4" Source="Assets/Game/WhitePieces/Pawn-White.png" Grid.Row="7" Grid.Column="0" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image Name="WhitePawn5" Source="Assets/Game/WhitePieces/Pawn-White.png" Grid.Row="7" Grid.Column="0" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image Name="WhitePawn6" Source="Assets/Game/WhitePieces/Pawn-White.png" Grid.Row="7" Grid.Column="0" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image Name="WhitePawn7" Source="Assets/Game/WhitePieces/Pawn-White.png" Grid.Row="7" Grid.Column="0" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image Name="WhitePawn8" Source="Assets/Game/WhitePieces/Pawn-White.png" Grid.Row="7" Grid.Column="0" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image Name="WhiteRook1" Source="Assets/Game/WhitePieces/Rook-White.png" Grid.Row="7" Grid.Column="0" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image Name="WhiteRook2" Source="Assets/Game/WhitePieces/Rook-White.png" Grid.Row="7" Grid.Column="0" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image Name="WhiteKnight1" Source="Assets/Game/WhitePieces/Knight-White.png" Grid.Row="7" Grid.Column="0" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image Name="WhiteKnight2" Source="Assets/Game/WhitePieces/Knight-White.png" Grid.Row="7" Grid.Column="0" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image Name="WhiteBishop1" Source="Assets/Game/WhitePieces/Bishop-White.png" Grid.Row="7" Grid.Column="0" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image Name="WhiteBishop2" Source="Assets/Game/WhitePieces/Bishop-White.png" Grid.Row="7" Grid.Column="0" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image Name="WhiteQueen" Source="Assets/Game/WhitePieces/Queen-White.png" Grid.Row="7" Grid.Column="0" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image Name="WhiteKing" Source="Assets/Game/WhitePieces/King-White.png" Grid.Row="7" Grid.Column="0" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <!-- Black Pieces -->
+            <Image Name="BlackPawn1" Source="Assets/Game/BlackPieces/Pawn-Black.png" Grid.Row="0" Grid.Column="0" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image Name="BlackPawn2" Source="Assets/Game/BlackPieces/Pawn-Black.png" Grid.Row="0" Grid.Column="0" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image Name="BlackPawn3" Source="Assets/Game/BlackPieces/Pawn-Black.png" Grid.Row="0" Grid.Column="0" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image Name="BlackPawn4" Source="Assets/Game/BlackPieces/Pawn-Black.png" Grid.Row="0" Grid.Column="0" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image Name="BlackPawn5" Source="Assets/Game/BlackPieces/Pawn-Black.png" Grid.Row="0" Grid.Column="0" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image Name="BlackPawn6" Source="Assets/Game/BlackPieces/Pawn-Black.png" Grid.Row="0" Grid.Column="0" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image Name="BlackPawn7" Source="Assets/Game/BlackPieces/Pawn-Black.png" Grid.Row="0" Grid.Column="0" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image Name="BlackPawn8" Source="Assets/Game/BlackPieces/Pawn-Black.png" Grid.Row="0" Grid.Column="0" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image Name="BlackRook1" Source="Assets/Game/BlackPieces/Rook-Black.png" Grid.Row="0" Grid.Column="0" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image Name="BlackRook2" Source="Assets/Game/BlackPieces/Rook-Black.png" Grid.Row="0" Grid.Column="0" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image Name="BlackKnight1" Source="Assets/Game/BlackPieces/Knight-Black.png" Grid.Row="0" Grid.Column="0" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image Name="BlackKnight2" Source="Assets/Game/BlackPieces/Knight-Black.png" Grid.Row="0" Grid.Column="0" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image Name="BlackBishop1" Source="Assets/Game/BlackPieces/Bishop-Black.png" Grid.Row="0" Grid.Column="0" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image Name="BlackBishop2" Source="Assets/Game/BlackPieces/Bishop-Black.png" Grid.Row="0" Grid.Column="0" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image Name="BlackQueen" Source="Assets/Game/BlackPieces/Queen-Black.png" Grid.Row="0" Grid.Column="0" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image Name="BlackKing" Source="Assets/Game/BlackPieces/King-Black.png" Grid.Row="0" Grid.Column="0" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        </Grid>
+        
+        <TextBlock Name="TurnText" Text="WHITE'S TURN!" FontSize="25" HorizontalAlignment="Center" Margin="0,40,0,0" IsHitTestVisible="False" Visibility="Visible"/>
+        <!-- End Screen -->
+        <Rectangle Name="EndScreen" Fill="Gray" HorizontalAlignment="Center" VerticalAlignment="Center" Width="500" Height="250" Visibility="Collapsed"/>
+        <TextBlock Name="CheckmateText" Text="CHECKMATE" FontSize="75" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0,0,0,150" Visibility="Collapsed"/>
+        <TextBlock Name="WinText" Text="White Wins!" FontSize="50" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0,150,0,0" Visibility="Collapsed"/>
+        <Button Name="RestartButton" Content="Restart" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Height="50" Click="Restart_Clicked" Visibility="Collapsed" Foreground="White"/>
+    </Grid>
+</Page>
